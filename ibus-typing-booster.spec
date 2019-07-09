@@ -4,7 +4,7 @@
 #
 Name     : ibus-typing-booster
 Version  : 2.6.3
-Release  : 3
+Release  : 4
 URL      : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.6.3/ibus-typing-booster-2.6.3.tar.gz
 Source0  : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.6.3/ibus-typing-booster-2.6.3.tar.gz
 Summary  : Predictive input method for the IBus platform
@@ -15,6 +15,7 @@ Requires: ibus-typing-booster-data = %{version}-%{release}
 Requires: ibus-typing-booster-libexec = %{version}-%{release}
 Requires: ibus-typing-booster-license = %{version}-%{release}
 Requires: ibus-typing-booster-locales = %{version}-%{release}
+Requires: m17n-lib
 BuildRequires : gettext
 BuildRequires : perl(XML::Parser)
 BuildRequires : pkgconfig(ibus-1.0)
@@ -76,8 +77,8 @@ locales components for the ibus-typing-booster package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1561012542
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562705913
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -87,14 +88,14 @@ export CXXFLAGS="$CXXFLAGS -fno-lto "
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1561012542
+export SOURCE_DATE_EPOCH=1562705913
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ibus-typing-booster
 cp COPYING %{buildroot}/usr/share/package-licenses/ibus-typing-booster/COPYING
