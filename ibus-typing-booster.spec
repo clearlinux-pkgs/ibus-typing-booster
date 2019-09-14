@@ -4,7 +4,7 @@
 #
 Name     : ibus-typing-booster
 Version  : 2.6.6
-Release  : 7
+Release  : 8
 URL      : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.6.6/ibus-typing-booster-2.6.6.tar.gz
 Source0  : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.6.6/ibus-typing-booster-2.6.6.tar.gz
 Summary  : Predictive input method for the IBus platform
