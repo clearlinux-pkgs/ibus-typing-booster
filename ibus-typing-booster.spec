@@ -4,7 +4,7 @@
 #
 Name     : ibus-typing-booster
 Version  : 2.9.2
-Release  : 25
+Release  : 26
 URL      : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.9.2/ibus-typing-booster-2.9.2.tar.gz
 Source0  : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.9.2/ibus-typing-booster-2.9.2.tar.gz
 Summary  : No detailed summary available
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1591626593
+export SOURCE_DATE_EPOCH=1591632877
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -96,7 +96,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1591626593
+export SOURCE_DATE_EPOCH=1591632877
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ibus-typing-booster
 cp %{_builddir}/ibus-typing-booster-2.9.2/COPYING %{buildroot}/usr/share/package-licenses/ibus-typing-booster/8624bcdae55baeef00cd11d5dfcfa60f68710a02
