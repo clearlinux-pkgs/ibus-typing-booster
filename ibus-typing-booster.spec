@@ -4,10 +4,10 @@
 # Using build pattern: configure
 #
 Name     : ibus-typing-booster
-Version  : 2.22.5
-Release  : 98
-URL      : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.22.5/ibus-typing-booster-2.22.5.tar.gz
-Source0  : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.22.5/ibus-typing-booster-2.22.5.tar.gz
+Version  : 2.23.0
+Release  : 99
+URL      : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.23.0/ibus-typing-booster-2.23.0.tar.gz
+Source0  : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.23.0/ibus-typing-booster-2.23.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -21,7 +21,6 @@ Requires: pypi-packaging
 BuildRequires : buildreq-configure
 BuildRequires : gettext
 BuildRequires : perl(XML::Parser)
-BuildRequires : pkg-config
 BuildRequires : pkgconfig(ibus-1.0)
 BuildRequires : pygobject
 BuildRequires : pypi-packaging
@@ -78,10 +77,10 @@ locales components for the ibus-typing-booster package.
 
 
 %prep
-%setup -q -n ibus-typing-booster-2.22.5
-cd %{_builddir}/ibus-typing-booster-2.22.5
+%setup -q -n ibus-typing-booster-2.23.0
+cd %{_builddir}/ibus-typing-booster-2.23.0
 pushd ..
-cp -a ibus-typing-booster-2.22.5 buildavx2
+cp -a ibus-typing-booster-2.23.0 buildavx2
 popd
 
 %build
@@ -89,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683644386
+export SOURCE_DATE_EPOCH=1688136260
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -116,7 +115,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make V=1 VERBOSE=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1683644386
+export SOURCE_DATE_EPOCH=1688136260
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ibus-typing-booster
 cp %{_builddir}/ibus-typing-booster-%{version}/COPYING %{buildroot}/usr/share/package-licenses/ibus-typing-booster/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :
