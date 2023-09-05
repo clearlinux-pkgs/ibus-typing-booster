@@ -4,10 +4,10 @@
 # Using build pattern: configure
 #
 Name     : ibus-typing-booster
-Version  : 2.23.4
-Release  : 103
-URL      : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.23.4/ibus-typing-booster-2.23.4.tar.gz
-Source0  : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.23.4/ibus-typing-booster-2.23.4.tar.gz
+Version  : 2.24.0
+Release  : 104
+URL      : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.24.0/ibus-typing-booster-2.24.0.tar.gz
+Source0  : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.24.0/ibus-typing-booster-2.24.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -77,10 +77,10 @@ locales components for the ibus-typing-booster package.
 
 
 %prep
-%setup -q -n ibus-typing-booster-2.23.4
-cd %{_builddir}/ibus-typing-booster-2.23.4
+%setup -q -n ibus-typing-booster-2.24.0
+cd %{_builddir}/ibus-typing-booster-2.24.0
 pushd ..
-cp -a ibus-typing-booster-2.23.4 buildavx2
+cp -a ibus-typing-booster-2.24.0 buildavx2
 popd
 
 %build
@@ -88,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691712505
+export SOURCE_DATE_EPOCH=1693926726
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -115,7 +115,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make V=1 VERBOSE=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1691712505
+export SOURCE_DATE_EPOCH=1693926726
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ibus-typing-booster
 cp %{_builddir}/ibus-typing-booster-%{version}/COPYING %{buildroot}/usr/share/package-licenses/ibus-typing-booster/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :
@@ -306,6 +306,7 @@ popd
 /usr/share/ibus-typing-booster/data/annotationsDerived/ast.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/az.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/be.xml
+/usr/share/ibus-typing-booster/data/annotationsDerived/bew.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/bg.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/bgn.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/bn.xml
@@ -317,6 +318,7 @@ popd
 /usr/share/ibus-typing-booster/data/annotationsDerived/chr.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/ckb.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/cs.xml
+/usr/share/ibus-typing-booster/data/annotationsDerived/cv.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/cy.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/da.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/de.xml
@@ -372,6 +374,7 @@ popd
 /usr/share/ibus-typing-booster/data/annotationsDerived/kn.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/ko.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/kok.xml
+/usr/share/ibus-typing-booster/data/annotationsDerived/ku.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/ky.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/lb.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/lij.xml
@@ -405,6 +408,7 @@ popd
 /usr/share/ibus-typing-booster/data/annotationsDerived/pt_PT.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/qu.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/quc.xml
+/usr/share/ibus-typing-booster/data/annotationsDerived/rhg.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/rm.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/ro.xml
 /usr/share/ibus-typing-booster/data/annotationsDerived/root.xml
