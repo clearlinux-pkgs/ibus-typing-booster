@@ -1,2 +1,4 @@
-Configure miss: x86_64-generic-linux-gnu-pkg-config
-Configure miss: x86_64-generic-linux-gnu-pkg-config
+Configure miss: dependency style of gcc-14
+Configure miss: gcc-14 option to enable C11 features
+Configure miss: x86_64-clr-linux-gnu-pkg-config
+Configure miss: x86_64-clr-linux-gnu-strip
