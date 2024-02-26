@@ -6,10 +6,10 @@
 # autospec commit: da8b975
 #
 Name     : ibus-typing-booster
-Version  : 2.25.1
-Release  : 115
-URL      : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.25.1/ibus-typing-booster-2.25.1.tar.gz
-Source0  : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.25.1/ibus-typing-booster-2.25.1.tar.gz
+Version  : 2.25.3
+Release  : 116
+URL      : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.25.3/ibus-typing-booster-2.25.3.tar.gz
+Source0  : https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.25.3/ibus-typing-booster-2.25.3.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -79,10 +79,10 @@ locales components for the ibus-typing-booster package.
 
 
 %prep
-%setup -q -n ibus-typing-booster-2.25.1
-cd %{_builddir}/ibus-typing-booster-2.25.1
+%setup -q -n ibus-typing-booster-2.25.3
+cd %{_builddir}/ibus-typing-booster-2.25.3
 pushd ..
-cp -a ibus-typing-booster-2.25.1 buildavx2
+cp -a ibus-typing-booster-2.25.3 buildavx2
 popd
 
 %build
@@ -90,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1707923294
+export SOURCE_DATE_EPOCH=1708963371
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -136,7 +136,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1707923294
+export SOURCE_DATE_EPOCH=1708963371
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ibus-typing-booster
 cp %{_builddir}/ibus-typing-booster-%{version}/COPYING %{buildroot}/usr/share/package-licenses/ibus-typing-booster/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :
