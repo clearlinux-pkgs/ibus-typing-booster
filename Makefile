@@ -1,5 +1,5 @@
 PKG_NAME := ibus-typing-booster
-URL = https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.27.68/ibus-typing-booster-2.27.68.tar.gz
+URL = https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.27.70/ibus-typing-booster-2.27.70.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
